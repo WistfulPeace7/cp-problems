@@ -1,0 +1,104 @@
+1. You are given a number n, representing the number of houses.
+2. In the next n rows, you are given 3 space separated numbers representing the cost of painting nth house with red or blue or green color.
+3. You are required to calculate and print the minimum cost of painting all houses without painting any consecutive house with same color
+
+A number n
+n1red n1blue n1green
+n2red n2blue n2green
+.. n number of elements
+
+A number representing the minimum cost of painting all houses without painting any consecutive house with same color.
+1 <= n <= 1000
+0 <= n1red, n1blue, .. <= 1000
+Sample Input
+4
+1 5 7
+5 8 4
+3 2 9
+1 2 4
+Sample Output
+8
+------------------------------------------------------------------------------------------------------
+
+
+Covid-19 is spreading fast! There are N cities, numbered from 0 to (N−1), arranged in a circular manner. City 0 is connected to city 1, 1 to 2, …, city (N−2) to city (N−1), and city (N−1) to city 0.
+
+The virus is currently at city X. Each day, it jumps from its current city, to the city K to its right, i.e., from city X to the city (X+K)%N. As the virus jumps, the cities in between don't get infected. Cities once infected stay infected. You live in city Y. Find if it will reach your city eventually. If it will, print YES, else print NO.
+
+Input:
+The first line of the input consists of an integer T, the number of test cases.
+The first and only line of each test case contains four space-separated integers - N, K, X and Y, denoting the number of cities, the size of jumps, Covid's current city, and the city that you live in, respectively.
+Output:
+For each test case, in a new line, print YES if Covid shall reach your city after a finite number of days, else print NO.
+
+Constraints
+1≤T≤100
+1≤N≤1000
+0≤X,Y≤N−1
+0≤K≤1000
+Subtasks
+Subtask 1 - 100% - Original constraints
+Sample Input:
+2
+6 2 5 3
+12 3 4 2
+Sample Output:
+YES
+NO
+Explanation:
+In the first sample, Covid starts at city 5, then goes to city 1, and then from city 1 to city 3. Thus, it reaches the city that you live in.
+
+In the second sample, Covid starts at city 4, goes to city 7, then 10, 1, then 4, 7, 10, …, and so on. It never reaches city 2
+
+------------------------------------------------------------------------------------------------------
+
+Chef published a blog post, and is now receiving many queries about it. On day i, he receives Qi queries. But Chef can answer at most k queries in a single day.
+
+Chef always answers the maximum number of questions that he can on any given day (note however that this cannot be more than k). The remaining questions (if any) will be carried over to the next day.
+
+Fortunately, after n days, the queries have stopped. Chef would like to know the first day during which he has some free time, i.e. the first day when he answered less than k questions.
+
+Input:
+First line will contain T, the number of testcases. Then the testcases follow.
+The first line of each testcase contains two space separated integers n and k.
+The second line of each testcase contains n space separated integers, namely Q1,Q2,...Qn.
+Output:
+For each testcase, output in a single line the first day during which chef answers less than k questions.
+
+Constraints
+1≤T≤105
+1≤ sum of n over all testcases ≤105
+1≤k≤108
+0≤Qi≤108
+Subtasks
+Subtask 1 - 20% points - Sum of Qi over all testcases and days ≤3.106
+Subtask 2 - 80% points - Original constraints
+Sample Input:
+2 
+6 5 
+10 5 5 3 2 1 
+1 1
+100
+Sample Output:
+6
+101
+Explanation:
+Test Case 1
+
+On the first day, chef answers 5 questions and leaves the remaining 5 (out of the 10) for the future days.
+
+On the second day, chef has 10 questions waiting to be answered (5 received on the second day and 5 unanswered questions from day 1). Chef answers 5 of these questions and leaves the remaining 5 for the future.
+
+On the third day, chef has 10 questions waiting to be answered (5 received on the third day and 5 unanswered questions from earlier). Chef answers 5 of these questions and leaves the remaining 5 for later.
+
+On the fourth day, chef has 8 questions waiting to be answered (3 received on the fourth day and 5 unanswered questions from earlier). Chef answers 5 of these questions and leaves the remaining 3 for later.
+
+On the fifth day, chef has 5 questions waiting to be answered (2 received on the fifth day and 3 unanswered questions from earlier). Chef answers all 5 of these questions.
+
+On the sixth day, chef has 1 question, which he answers. This is the first day he answers less than 5 questions, and so the answer is 6.
+
+Test Case 2
+
+Chef answers 1 question a day for the first 100 days. On day 101, he is free
+
+------------------------------------------------------------------------------------------------------
